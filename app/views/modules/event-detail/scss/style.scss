@@ -1,0 +1,37 @@
+.artist-info{
+  @extend .bordered-box;
+  border:solid 1px rgba(#23bac8, 0.7);
+  padding: 20px;
+  margin-bottom: 50px;
+  strong{
+    letter-spacing: 1px;
+    font-size:10px;
+    color:$color-aqua;
+    text-transform: uppercase;
+    @include breakpoint(large){
+      font-size:12px;
+    }
+  }
+  p,ul li a{
+    color:$black;
+    font-size:14px;
+    font-family: 'Lato', sans-serif;
+  }
+  ul{
+    list-style-type:none;
+  }
+  &:before{
+    border:solid 1px rgba(#23bac8, 0.7);
+    opacity:1;
+  }
+}
+
+
+.container-event{
+  margin:0px;
+  padding-top:40px;
+  @include breakpoint(large){
+    padding-top: 130px;
+  }
+}
+

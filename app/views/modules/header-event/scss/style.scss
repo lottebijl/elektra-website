@@ -1,0 +1,23 @@
+.header.header--event{
+  background-image:none;
+  padding-top:80px;
+  height:300px;
+  @include breakpoint(large){
+    padding-top:130px;
+    height:100vh;
+  }
+  .header__figure{
+    max-height:300px;
+    @include breakpoint(large){
+      max-height:100%;
+    }
+  }
+  .header__title{
+    font-weight:$font-medium;
+    font-size:25px;
+    @include breakpoint(large){
+      font-size:55px;
+      line-height:60px;
+    }
+  }
+}

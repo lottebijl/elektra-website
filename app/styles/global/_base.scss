@@ -1,0 +1,29 @@
+figure,ul{
+  margin:0px;
+}
+
+.row{
+  padding:0px 15px;
+  max-width:900px;
+  @include breakpoint(medium){
+    padding:0px;
+  }
+  @include breakpoint(xlarge){
+      max-width:1024px;
+  }
+}
+
+article{
+  margin:0px;
+  @include breakpoint(large){
+    margin:50px 0px;
+  }
+  p, strong{
+    font-family: $font-secondary;
+  }
+  strong{
+    display: inline-block;
+    margin-bottom:10px;
+  }
+}
+

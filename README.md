@@ -1,1 +1,3 @@
-# elektra-website
+#contributors
+
+Lotte Bijl - Online Department

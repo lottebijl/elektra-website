@@ -1,0 +1,41 @@
+.section-bevestigd{
+  background-color:$color-white;
+  text-align:center;
+  color:$color-darkblue;
+  margin-top: 440px;
+  margin-bottom: 30px;
+  @include breakpoint(large){
+    margin-top: 300px;
+  }
+  @include breakpoint(1440){
+    margin-top:50px;
+  }
+  .section-bevestigd__title{
+    @extend .textstyle-title;
+    @include breakpoint(medium){
+      text-align:left;
+    }
+  }
+  ul.slick-dots{
+    list-style-type: none;
+    li{
+      font-size:0px;
+      height:10px;
+      width:8px;
+      display:inline-block;
+      &.slick-active{
+        button{
+          @include svgIcon('icon-dot--fill', $color-darkblue);
+        }
+      }
+      button{
+        height:10px;
+        width:8px;
+        @include svgIcon('icon-dot', $color-darkblue);
+      }
+    }
+  }
+  .btn-primary{
+    margin-top:20px;
+  }
+}

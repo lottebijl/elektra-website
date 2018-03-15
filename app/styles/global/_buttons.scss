@@ -1,0 +1,45 @@
+.btn{
+  display:inline-block;
+  &.btn-primary{
+    position:relative;
+    padding:0 15px;
+    background-color:transparent;
+    height:40px;
+    line-height:36px;
+    font-family:$font-secondary;
+    font-weight:$font-bold;
+    font-size: 11px;
+    color: $color-white;
+    letter-spacing: 1.4px;
+    z-index:1;
+    &:before, &:after{
+      @include transition($transition);
+      position:absolute;
+      content:'';
+      border:0.5px solid rgba(#c2e2e4, 0.5);
+      z-index:-1;
+      height:40px;
+      display:block;
+      width:100%;
+      top:0px;
+      left:0px;
+    }
+    &:after{
+      @include transform(translateY(-4px) translateX(3px));
+    }
+    &:hover, &:focus, &:active{
+      &:before{
+        @include transform(translateY(-4px) translateX(3px));
+      }
+      &:after{
+        @include transform(translateY(0px) translateX(0px));
+      }
+    }
+    &.dark{
+      color:$color-black;
+      &:before, &:after{
+        border:0.5px solid rgba(#c2e2e4, 1);
+      }
+    }
+  }
+}

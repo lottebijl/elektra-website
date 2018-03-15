@@ -1,0 +1,18 @@
+<section class="header header--event">
+  <figure class="header__figure" style="background-image:url('assets/images/{{event.image-big}}')">
+  </figure>
+  <div class="row">
+    <div class="columns small-24 large-14 large-offset-1 end">
+      <p class="header__date">{{event.weekday}} {{event.day}} {{event.month}} {{event.year}}</p>
+      {{#if event.title}}
+      <p class="header__title">{{event.title}}</p>
+      {{/if}}
+      {{#if event.genre}}
+      <p class="header__genre">{{event.genre}}</p>
+      {{/if}}
+      {{#if event.from}}
+      <p class="header__location">uit {{event.from}}</p>
+      {{/if}}
+    </div>
+  </div>
+</section>

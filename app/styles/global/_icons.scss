@@ -1,0 +1,19 @@
+.icon{
+  display:inline-block;
+  background-size:contain;
+  &.icon-menu{
+    @include svgIcon('icon-hamburger', $color-white);
+    width:15px;
+    height:15px;
+    &.icon-close{
+      width:15px;
+      height:15px;
+      @include svgIcon('icon-close', $color-white);
+    }
+  }
+  &.icon-arrow{
+    @include svgIcon('icon-arrow', $color-white);
+    width: 14px;
+    height: 10px;
+  }
+}

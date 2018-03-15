@@ -1,0 +1,13 @@
+*{
+  font-family: $font-family;
+}
+.textstyle-title{
+  font-weight:$font-bold;
+  font-size: 11px;
+  text-transform:uppercase;
+  letter-spacing: 2.5px;
+  line-height: 16px;
+  @include breakpoint(large){
+      font-size: 13px;
+  }
+}

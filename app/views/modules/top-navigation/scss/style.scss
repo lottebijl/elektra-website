@@ -1,0 +1,76 @@
+.top-navigation{
+  z-index:3;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:50px;
+  @include breakpoint(large){
+    height:100px;
+  }
+  .top-navigation__logo{
+    margin-top:15px;
+    float:left;
+    display:block;
+    width: 130px;
+    height: 30px;
+    background-image:url('../assets/images/logo-elektra.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    @include breakpoint(large){
+      width:120px;
+      height:30px;
+    }
+    h1{
+      text-indent: -999px;
+      font-size:0;
+    }
+  }
+  .top-navigation__menu{
+    float:right;
+    display:none;
+    @include breakpoint(large){
+      display:block;
+    }
+    li{
+      display:inline-block;
+      list-style-type:none;
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+      a{
+        text-transform:uppercase;
+        font-family: $font-family;
+        font-weight:$font-bold;
+        font-size: 10px;
+        color: $color-white;
+        letter-spacing: 4px;
+        line-height: 45px;
+      }
+      &.open{
+        .top-navigation__submenu{
+          opacity:1;
+          visibility:visible;
+        }
+      }
+      .top-navigation__submenu{
+        opacity:0;
+        visibility:hidden;
+        position:absolute;
+        @include transition(0.2s all ease-in);
+
+        a{
+          font-family:$font-secondary;
+          display:block;
+          text-transform:lowercase;
+          font-weight:$font-semibold;
+          font-size: 12px;
+          color: #FFFFFF;
+          letter-spacing: 1.8px;
+          line-height: 20px;
+        }
+
+      }
+    }
+  }
+}

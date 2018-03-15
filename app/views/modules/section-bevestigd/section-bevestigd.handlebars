@@ -1,0 +1,20 @@
+<section class="section-bevestigd">
+  <div class="row">
+    <div class="columns small-24">
+      <p class="section-bevestigd__title">Net bevestigd</p>
+    </div>
+  </div>
+  <div class="row">
+      {{#each highlightedEvents}}
+        <div class="columns small-24 large-8">
+          {{>elements/agenda-block}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-24">
+      <a href="agenda.php" class="btn btn-primary dark">Bekijk volledige agenda</a>
+    </div>
+  </div>
+</section>
