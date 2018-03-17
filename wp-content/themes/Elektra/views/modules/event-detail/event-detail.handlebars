@@ -1,0 +1,63 @@
+
+<article class="container-event">
+  <div class="container">
+    <div class="row">
+      {{#if event.youtubeID}}
+      <div class="header__video">
+        <div class="row">
+          <div class="columns small-24 large-14 float-right">
+            <div class="video-container">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{event.youtubeID}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+      <div class="row">
+        <div class="content-container">
+        <div class="columns small-24 large-14 large-push-10">
+          <div class="content">
+            {{{event.content}}}
+          </div>
+        </div>
+        <div class="columns small-24 large-8 large-pull-15">
+          <div class="artist-info">
+            {{#if event.price}}
+              <strong>Entree</strong>
+              <p>{{event.price}}</p>
+              {{else}}
+              <strong>Entree</strong>
+              <p>gratis</p>
+            {{/if}}
+            {{#if event.door}}
+              <strong>Deur open</strong>
+              <p>{{event.door}} uur</p>
+            {{/if}}
+            {{#if event.start}}
+              <strong>Start</strong>
+              <p>{{event.start}} uur</p>
+            {{/if}}
+            {{#if event.similarMusic}}
+              <strong>Klinkt als:</strong>
+              <p>{{event.similarMusic}}</p>
+            {{/if}}
+            <ul>
+              {{#if event.facebook}}
+              <li><a href="{{event.facebook}}">Facebook</a></li>
+              {{/if}}
+              {{#if event.officialWebsite}}
+              <li><a href="{{event.officialWebsite}}">Official website</a></li>
+              {{/if}}
+            </ul>
+          </div>
+          {{#if event.spotify}}
+          <div class="spotify-container">
+            <iframe src="{{event.spotify}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</article>
