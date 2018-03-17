@@ -47,9 +47,9 @@
     vendor: [
       directories.node + '/magnific-popup/dist/magnific-popup.css',
       directories.node + '/foundation-sites/dist/css/foundation.css',
-      directories.node + '/video.js/dist/video-js.min.css',
       directories.node + '/slick-carousel/slick/slick.css',
-      directories.node + '/dropzone/dist/dropzone.css'
+      directories.node + '/photoswipe/dist/photoswipe.css',
+      directories.node + '/photoswipe/dist/default-skin/default-skin.css'
     ],
     dest: directories.dest + '/css'
   },
@@ -64,7 +64,8 @@
       directories.node + '/jquery/dist/jquery.js',
       directories.node + '/foundation-sites/dist/js/foundation.js',
       directories.node + '/slick-carousel/slick/slick.min.js',
-      directories.node + '/dropzone/dist/min/dropzone.min.js',
+      directories.node + '/photoswipe/dist/photoswipe.js',
+      directories.node + '/photoswipe/dist/photoswipe-ui-default.js',
       directories.src + '/scripts/vendor/**/*.js',
 
     ],

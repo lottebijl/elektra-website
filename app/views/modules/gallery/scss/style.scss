@@ -1,0 +1,31 @@
+.gallery{
+  .gallery__container{
+    @include display(flex);
+    @include flex-wrap(wrap);
+    figure{
+      width:100%;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0px;
+      margin-bottom:15px;
+      overflow: hidden;
+      @include breakpoint(medium){
+        width: 50%;
+      }
+      @include breakpoint(large){
+        width: 33.33%;
+      }
+      @include breakpoint(xlarge){
+        width: 25%;
+      }
+      .caption{
+        display:none;
+      }
+      img{
+        width: 100%;
+        height: auto;
+        padding-right:10px;
+      }
+    }
+  }
+}
