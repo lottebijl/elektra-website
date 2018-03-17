@@ -22,6 +22,7 @@
     cleanCSS    = require('gulp-clean-css'),
     sass        = require('gulp-sass'),
     php = require('gulp-connect-php'),
+    phpipe = require('gulp-phpipe'),
     sassOptions = {errLogToConsole: true, outputStyle: 'expanded'};
 
   const directories = {
@@ -130,8 +131,14 @@
   gulp.task('createTemplates', function () {
     return gulp.src(['app/*.php', 'app/*.html'])
       // .pipe(fileinclude({prefix: '@@'}))
+      .pipe(phpipe())
+      .pipe(rename(function (path) {
+          path.extname = ".html";
+          return path;
+      }))
       .pipe(gulp.dest('dist'));
   });
+
 
   gulp.task('handlebarsTemplates', function() {
     return gulp.src(['app/views/*.handlebars'])

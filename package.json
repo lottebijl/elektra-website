@@ -33,12 +33,14 @@
     "gulp-newer": "^1.3.0",
     "gulp-notify": "^2.2.0",
     "gulp-page-json": "^0.2.0",
+    "gulp-phpipe": "^1.1.0",
     "gulp-sass": "^2.2.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.2",
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.1.0",
+    "htmlmin": "0.0.7",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "requirejs": "^2.1.22",
@@ -49,6 +51,6 @@
     "Magnific-Popup": "dimsemenov/Magnific-Popup",
     "foundation-sites": "^6.3.0",
     "jquery": "^3.1.1",
-    "wowjs": "matthieua/WOW"
+    "wowjs": "github:matthieua/WOW"
   }
 }
