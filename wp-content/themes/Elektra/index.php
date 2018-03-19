@@ -11,24 +11,23 @@ endif; ?>
   </div>
   <div class="row">
 
-<?php
-		$args = array( 'post_type' => 'events');
-		$the_query = new WP_Query( $args );
+	<?php
+			$args = array( 'post_type' => 'events');
+			$the_query = new WP_Query( $args );
 
-		if ( $the_query->have_posts() ) :
-			while ( $the_query->have_posts() ) : $the_query->the_post();
-				include('event-block.php');
-			endwhile;
-		else :
-			_e( 'Er zijn geen evenementen gevonden.' );
-		endif;
-	?>
+			if ( $the_query->have_posts() ) :
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+					include('event-block.php');
+				endwhile;
+			else :
+				_e( 'Er zijn geen evenementen gevonden.' );
+			endif;
+		?>
 
-    </div>
   </div>
   <div class="row">
     <div class="columns small-24">
-      <a href="agenda.php" class="btn btn-primary dark">Bekijk volledige agenda</a>
+      <a href="/agenda" class="btn btn-primary dark">Bekijk volledige agenda</a>
     </div>
   </div>
 </section>

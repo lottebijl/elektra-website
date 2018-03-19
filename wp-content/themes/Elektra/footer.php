@@ -10,7 +10,7 @@
       </ul>
     </div>
     <div class="columns small-24 large-8 end">
-      <a href="http://www.sojs.nl"><img src="assets/images/logo-sojs--white.png" class="footer__logo"></a>
+      <a href="http://www.sojs.nl"><img src="<?php bloginfo('template_directory');?>/assets/images/logo-sojs--white.png" class="footer__logo"></a>
       <p class="footer__text">Poppodium Elektra maakt deel uit Stichting Open Jeugdwerk Sliedrecht</p>
       <a href="http://www.sojs.nl" target="_blank" class="footer__link"><i class="icon icon-arrow"></i>Meer over SOJS</a>
     </div>

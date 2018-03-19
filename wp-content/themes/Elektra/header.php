@@ -14,19 +14,6 @@
     <div class="mobile-menu">
       <div class="row">
         <div class="columns small-23 small-offset-1">
-          <!-- <ul class="mobile-menu__nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="agenda.php">Agenda</a></li>
-            <li><a href="over-elektra.php">Over Elektra</a></li>
-            <li><a href="contact.php">Contact</a></li>
-          </ul> -->
-          <?php wp_nav_menu(
-							array(
-								'theme_location' => 'header-menu',
-								'container' => '',
-								'menu_class' => 'mobile-menu__nav',
-							)
-						);?>
           <ul class="mobile-menu__subnav">
             <li><a href="repeteren.php"><i class="icon icon-arrow"></i>Oefenruimte</a></li>
             <li><a href="vrijwilliger-worden.php"><i class="icon icon-arrow"></i>Vrijwilliger worden</a></li>
@@ -40,12 +27,19 @@
       <div class="row">
         <div class="columns small-3">
           <!-- TODO: change to index -->
-          <a href="index.php" class="top-navigation__logo">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="top-navigation__logo">
             <h1>Elektra</h1>
           </a>
         </div>
         <div class="columns small-12">
-          <ul class="top-navigation__menu">
+          <?php wp_nav_menu(
+              array(
+                'theme_location' => 'header-menu',
+                'container' => '',
+                'menu_class' => 'top-navigation__menu',
+              )
+            );?>
+          <!-- <ul class="top-navigation__menu">
             <li><a href="agenda.php">Agenda</a></li>
             <li><a href="over-elektra.php">Over Elektra</a></li>
             <li class="dropdown"><a target="_blank" href="https://www.google.nl/maps/place/Stichting+Open+Jeugdwerk+Sliedrecht+%2F+Jongenerencentrum-poppodium+Elektra/@51.82267,4.7697643,17z/data=!3m1!4b1!4m5!3m4!1s0x47c429e1c6d62a87:0xdeed2be6acee23ee!8m2!3d51.82267!4d4.771953">Locatie</a>
@@ -59,7 +53,7 @@
                 <a href="mailto:bestuur@sojs.nl "><i class="icon icon-mail"></i>bestuur@sojs.nl </a>
               </div>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
