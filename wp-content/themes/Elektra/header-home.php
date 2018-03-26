@@ -22,7 +22,7 @@
 
         $today = date('Ymd');
 
-        $args = get_posts(array(
+        $args = array(
           'post_type'	=> 'events',
           'posts_per_page' => '1',
           'meta_query' => array(
@@ -34,9 +34,7 @@
           ),
           'orderby'	=> 'meta_value_num',
           'order'		=> 'ASC'
-        ));
-
-        echo $today;
+        );
 
         $the_query = new WP_Query( $args );
 

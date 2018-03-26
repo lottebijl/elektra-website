@@ -42,7 +42,7 @@ function jb_create_future_events() {
 		array(
 			'labels' => array(
 				'name' => __( 'Elektra events' ),
-				'singular_name' => __( 'Event' ),
+				'singular_name' => __( 'event' ),
 				'add_new'        	  => 'Een nieuw evenement toevoegen',
 				'add_new_item'        => 'Voeg een nieuw evenement toe',
 				'edit_item'        	  => 'Dit evenement bewerken',
