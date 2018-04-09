@@ -1,11 +1,13 @@
-<?
+<?php
 	$image = get_field('event_image');
+	$date = get_field('event_date', false, false);
+	$date = new DateTime($date);
 ?>
 
 <div class="columns small-24 large-14 float-right">
   <a href="<?php the_permalink();?>" class="event-block">
     <div class="today">
-      <p class="today__title"><?the_field('event_date')?></p>
+      <p class="today__title">Upcoming<span><?php echo $date->format('j M Y'); ?></span></p>
       <ul class="today__info">
         <li>deur open:<span><?the_field('event_open')?>uur</span></li>
         <li>start:<span><?the_field('event_start')?> uur</span></li>

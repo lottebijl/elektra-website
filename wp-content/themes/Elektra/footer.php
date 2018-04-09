@@ -1,12 +1,20 @@
 <footer>
   <div class="row">
     <div class="columns small-24 large-10">
-      <ul class="footer__nav">
+      <?php wp_nav_menu(
+          array(
+            'theme_location' => 'footer-menu',
+            'container' => '',
+            'menu_class' => 'footer__nav',
+          )
+        );
+      ?>
+      <!-- <ul class="footer__nav">
         <li><a href="repeteren.php">Oefenruimte</a></li>
-        <li><a href="vrijwilliger-worden.php">Vrijwilliger worden</a></li>
+        <li><a href="vrijwilliger-worden.php">Vrijwilliger worden</a></li> -->
         <!-- <li><a href="praktische-info.php">Praktische informatie</a></li> -->
         <!-- <li><a href="werken-bij.php">Werken bij</a></li> -->
-        <li><a href="over-elektra.php">Over Elektra</a></li>
+        <!-- <li><a href="over-elektra.php">Over Elektra</a></li> -->
       </ul>
     </div>
     <div class="columns small-24 large-8 end">
@@ -34,10 +42,10 @@
   ga('send', 'pageview');
 
 </script>
-<script src="js/vendor.min.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/vendor.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
-<script src="js/script.min.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/script.min.js"></script>
 <script><!-- TODO: analytics --></script>
 </body>
 </html>

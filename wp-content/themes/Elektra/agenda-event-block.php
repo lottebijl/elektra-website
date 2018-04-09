@@ -1,9 +1,13 @@
+<?php
+  $date = get_field('event_date', false, false);
+  $date = new DateTime($date);
+?>
+
 <div class="columns small-24">
-  <a href="event-disquiet.php" class="agenda-block agenda-block--small">
+  <a href="<?php the_permalink(); ?>" class="agenda-block agenda-block--small">
     <div class="agenda__inner">
       <p class="agenda__date">
-        zat
-        <span><?the_field('event_date')?></span>
+        <span><?php echo $date->format('j M Y'); ?></span>
       </p>
       <div class="agenda__content">
         <p class="agenda__title">

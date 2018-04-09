@@ -1,13 +1,15 @@
 <?php get_header();?>
 <?php
 	$image = get_field('event_image');
+	$date = get_field('event_date', false, false);
+	$date = new DateTime($date);
 ?>
 <section class="header header--event">
   <figure class="header__figure" style="background-image:url('<?php echo $image ?>')">
   </figure>
   <div class="row">
     <div class="columns small-24 large-14 large-offset-1 end">
-      <p class="header__date"><?the_field('event_date')?></p>
+      <p class="header__date"><?php echo $date->format('j M Y'); ?></p>
       <p class="header__title"><?php the_title(); ?></p>
       <p class="header__genre">
         <?php if (get_field('event_band_genre')): ?>

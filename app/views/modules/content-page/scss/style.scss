@@ -4,7 +4,7 @@ article{
     width:100%;
     @include breakpoint(large){
       margin-top: -305px;
-    }    
+    }
   }
   .video-container{
     width:100%;
@@ -34,6 +34,9 @@ article{
     }
     &#pinned-menu{
       li{
+        &.current_page_item {
+          display: none;
+        }
         .btn{
           color:$color-black;
           @include breakpoint(large){

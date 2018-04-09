@@ -40,7 +40,7 @@
 
         if ( $the_query->have_posts() ) :
           while ( $the_query->have_posts() ) : $the_query->the_post();
-            include('home-event-block.php');
+            include('home-header__event-block.php');
           endwhile;
         else :
           _e( 'Er is geen evenement gevonden' );
@@ -48,12 +48,35 @@
 
       ?>
       <div class="columns small-24 large-9 large-pull-1 xlarge-pull-0">
-        <div class="highlighted-newsitem">
-          <span>het laatste nieuws</span>
-          <h2>Oud-vrijwilligers jaren 80 gezocht</h2>
-          <p>Op 12 mei zal een 80's feest plaatsvinden, maar we zijn nog hard op zoek naar oud-vrijwilligers en bands van toen die mee willen helpen.</p>
-          <a href="event-reunie-80.php" class="btn btn-primary dark">Lees meer</a>
-        </div>
+        <?php
+
+          $args = array(
+            'post_type'	=> 'post',
+            'posts_per_page' => '1',
+            'orderby'	=> 'publish_date',
+            'order'		=> 'ASC'
+          );
+
+          $the_query = new WP_Query( $args );
+
+          if ( $the_query->have_posts() ) :
+            while ( $the_query->have_posts() ) : $the_query->the_post();
+            ?>
+
+            <div class="highlighted-newsitem">
+              <span>het laatste nieuws</span>
+              <h2><?php the_title(); ?></h2>
+              <p><?php the_excerpt(); ?></p>
+              <a href="<?php the_permalink();?>" class="btn btn-primary dark">Lees meer</a>
+            </div>
+
+            <?
+            endwhile;
+          else :
+            _e( 'Er is geen evenement gevonden' );
+          endif;
+
+        ?>
       </div>
     </div>
   </div>

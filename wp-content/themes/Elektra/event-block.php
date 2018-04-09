@@ -1,5 +1,7 @@
-<?
+<?php
 	$image = get_field('event_image');
+	$date = get_field('event_date', false, false);
+	$date = new DateTime($date);
 ?>
 
 <div class="columns small-24 large-8 end">
@@ -7,18 +9,7 @@
   <figure class="tilter__figure agenda__bg">
     <div class="tilter__image agenda__image" style="background-image:url('<?php echo $image ?>')"></div>
     <figcaption class="tilter__caption agenda__inner">
-      <p class="agenda__date">
-        <?php
-
-          $format_in = 'yymmdd'; // the format your value is saved in (set in the field options)
-          $format_out = 'dd-mm-YY'; // the format you want to end up with
-
-          $date = DateTime::createFromFormat($format_in, the_field('event_date'));
-          echo $date;
-          // echo $date->format( $format_out );
-
-        ?>
-      </p>
+      <p class="agenda__date"><?php echo $date->format('j M Y'); ?></p>
       <div class="agenda__content">
         <p class="agenda__title">
           <?php the_title(); ?>
