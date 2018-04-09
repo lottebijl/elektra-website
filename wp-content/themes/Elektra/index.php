@@ -12,7 +12,10 @@ endif; ?>
   <div class="row">
 
 	<?php
-			$args = array( 'post_type' => 'events');
+			$args = array(
+				'post_type' => 'events',
+				'posts_per_page' => '3',
+			);
 			$the_query = new WP_Query( $args );
 
 			if ( $the_query->have_posts() ) :

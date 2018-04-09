@@ -22,4 +22,13 @@
     }
     return $atts;
   }
+
+  // Change submenu class
+  add_filter('wp_nav_menu','change_submenu_class');
+
+  function change_submenu_class($menu) {
+    $menu = preg_replace('/ class="sub-menu"/','/ class="top-navigation__submenu" /',$menu);  
+    return $menu;
+  }
+
 ?>

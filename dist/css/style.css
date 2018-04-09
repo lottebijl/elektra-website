@@ -7630,13 +7630,17 @@ footer {
         position: absolute;
         -webkit-transition: 0.2s all ease-in;
         -moz-transition: 0.2s all ease-in;
-        transition: 0.2s all ease-in; }
-        .top-navigation .top-navigation__menu li .top-navigation__submenu a {
-          font-family: "Lato", sans-serif;
-          display: block;
-          text-transform: lowercase;
-          font-weight: 600;
-          font-size: 12px;
-          color: #FFFFFF;
-          letter-spacing: 1.8px;
-          line-height: 20px; }
+        transition: 0.2s all ease-in;
+        margin-left: 0; }
+        .top-navigation .top-navigation__menu li .top-navigation__submenu li {
+          display: initial;
+          margin-right: 0; }
+          .top-navigation .top-navigation__menu li .top-navigation__submenu li a {
+            font-family: "Lato", sans-serif;
+            display: block;
+            text-transform: lowercase;
+            font-weight: 600;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 1.8px;
+            line-height: 20px; }

@@ -5,8 +5,8 @@
     <div class="columns small-24 large-14 large-offset-1 end">
       <p class="header__title">Het <span>poppodium</span> voor en door jongeren in <span>Sliedrecht</span></p>
       <ul class="header__joinlist">
-        <li><a href="over-elektra.php" class="btn btn-primary"><span clas="icon icon-mail"></span>Meer over Elektra</a></li>
-        <li><a href="vrijwilliger-worden.php" class="btn btn-primary"><span clas="icon icon-mail"></span>Vrijwilliger worden bij Elektra</a></li>
+        <li><a href="/over-elektra/" class="btn btn-primary"><span clas="icon icon-mail"></span>Meer over Elektra</a></li>
+        <li><a href="/vrijwilliger-worden/" class="btn btn-primary"><span clas="icon icon-mail"></span>Vrijwilliger worden bij Elektra</a></li>
       </ul>
       <ul class="header__contactlist">
         <li><a href="google-maps.php" class="btn btn-primary"><span class="icon icon-pin"></span>Stationsweg 4, Sliedrecht</a></li>
