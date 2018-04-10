@@ -118,7 +118,7 @@
     position:absolute;
     content:'';
     border:0.5px solid $color-lightblue;
-    z-index:2;
+    z-index:-1;
     height:100%;
     display:block;
     width:100%;
@@ -471,5 +471,3 @@
     width:100%;
   }
 }
-
-
