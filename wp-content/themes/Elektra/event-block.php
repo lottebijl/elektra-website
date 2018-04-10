@@ -15,13 +15,23 @@
           <?php the_title(); ?>
         </p>
         <span class="agenda__subtitle">
-					<?php if (get_field('event_band_genre')) : ?>
-						<?the_field('event_band_genre');?>
-					<?php else : ?>
-						<?the_field('event_subtitle');?>
-					<?php endif; ?>
+					<?php
+						if (!empty(get_field('event_band_genre'))) :
+							echo get_field('event_band_genre');
+						else :
+							echo get_field('event_subtitle');
+						endif;
+					?>
 				</span>
-        <span class="agenda__price">€ <?the_field('event_price')?></span>
+        <span class="agenda__price">
+					<?php
+						if (empty(get_field('event_price'))) :
+							echo "Gratis";
+						else :
+							echo "€". get_field('event_price');
+						endif;
+					?>
+				</span>
       </div>
     </figcaption>
   </figure>

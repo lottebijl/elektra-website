@@ -9,19 +9,37 @@
     <div class="today">
       <p class="today__title">Upcoming<span><?php echo $date->format('j M Y'); ?></span></p>
       <ul class="today__info">
-        <li>deur open:<span><?the_field('event_open')?>uur</span></li>
-        <li>start:<span><?the_field('event_start')?> uur</span></li>
-        <li>entree:<span>€<?the_field('event_price')?></span></li>
+				<?php
+					if(!empty(get_field('event_open'))) :
+						echo "<li>deur open:<span>".get_field('event_open')."</span></li>";
+					endif;
+				?>
+				<?php
+					if(!empty(get_field('event_start'))) :
+						echo "<li>start:<span>".get_field('event_start')."</span></li>";
+					endif;
+				?>
+        <li>entree:<span>
+					<?php
+						if (empty(get_field('event_price'))) :
+							echo "Gratis";
+						else :
+							echo "€". get_field('event_price');
+						endif;
+					?>
+				</span></li>
       </ul>
     </div>
     <figure class="event__bg" style="background-image:url('<?php echo $image ?>')"></figure>
     <p class="event__title"><?php the_title(); ?></p>
     <p class="event__subtitle">
-      <?php if (get_field('event_band_genre')): ?>
-        <?the_field('event_band_genre');?>
-      <?php else: ?>
-        <?the_field('event_subtitle');?>
-      <?php endif; ?>
+			<?php
+				if(!empty(get_field('event_band_genre'))) :
+					echo get_field('event_band_genre');
+				else :
+					echo get_field('event_band_subtitle');
+				endif;
+			?>
     </p>
   </a>
 </div>

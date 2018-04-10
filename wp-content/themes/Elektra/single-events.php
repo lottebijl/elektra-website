@@ -12,11 +12,13 @@
       <p class="header__date"><?php echo $date->format('j M Y'); ?></p>
       <p class="header__title"><?php the_title(); ?></p>
       <p class="header__genre">
-        <?php if (get_field('event_band_genre')): ?>
-          <?the_field('event_band_genre');?>
-        <?php else: ?>
-          <?the_field('event_subtitle');?>
-        <?php endif; ?>
+				<?php
+					if (!empty(get_field('event_band_genre'))) :
+						echo get_field('event_band_genre');
+					else :
+						echo get_field('event_subtitle');
+					endif;
+				?>
       </p>
     </div>
   </div>
@@ -24,15 +26,17 @@
 <article class="container-event">
   <div class="container">
     <div class="row">
-      <div class="header__video">
-        <div class="row">
-          <div class="columns small-24 large-14 float-right">
-            <div class="video-container">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?the_field('event_band_yt')?>" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+			<?php if (get_field('event_yt')): ?>
+	      <div class="header__video">
+	        <div class="row">
+	          <div class="columns small-24 large-14 float-right">
+	            <div class="video-container">
+	              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?the_field('event_yt')?>" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+			<?php endif; ?>
       <div class="row">
         <div class="content-container">
         <div class="columns small-24 large-14 large-push-10">
@@ -48,26 +52,46 @@
         <div class="columns small-24 large-8 large-pull-15">
           <div class="artist-info">
               <strong>Entree</strong>
-              <?php if (get_field('event_price')): ?>
-                <p>€<?the_field('event_price')?>,-</p>
-              <?php else: ?>
-                <p>Gratis</p>
-              <?php endif; ?>
-              <strong>Deur open</strong>
-              <p><?the_field('event_open')?></p>
-              <strong>Start</strong>
-              <p><?the_field('event_start')?></p>
+              <p>
+							<?php
+								if (empty(get_field('event_price'))) :
+									echo "Gratis";
+								else :
+									echo "€". get_field('event_price');
+								endif;
+							?>
+							</p>
+							<?php
+								if (!empty(get_field('event_open'))) :
+									echo"<strong>Deur open</strong>";
+									echo "<p>" . get_field('event_open') . "</p>";
+								endif;
+							?>
+							<?php
+								if (!empty(get_field('event_start'))) :
+									echo"<strong>Start</strong>";
+									echo "<p>" . get_field('event_start') . "</p>";
+								endif;
+							?>
             <ul>
-              <?php if (get_field('event_band_fb')): ?>
-                <li><a href="<?the_field('event_band_fb')?>">Facebook</a></li>
-              <?php endif; ?>
-              <?php if (get_field('event_band_site')): ?>
-                <li><a href="<?the_field('event_band_site')?>">Official website</a></li>
-              <?php endif; ?>
+							<?php
+								if (!empty(get_field('event_fb'))) :
+									echo '<li><a href="'.get_field('event_fb').'">Facebook</a></li>';
+								endif;
+							?>
+							<?php
+								if (!empty(get_field('event_band_site'))) :
+									echo '<li><a href="'.get_field('event_band_site').'">Official website</a></li>';
+								endif;
+							?>
             </ul>
           </div>
           <div class="spotify-container">
-				    <iframe src="https://embed.spotify.com/?uri=<?the_field('event_band_spf')?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+						<?php
+							if (!empty(get_field('event_band_spf'))) :
+								echo '<iframe src="https://embed.spotify.com/?uri='.get_field('event_band_spf').'" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>';
+							endif;
+						?>
 				  </div>
         </div>
       </div>

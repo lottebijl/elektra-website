@@ -1,7 +1,8 @@
 <footer>
   <div class="row">
     <div class="columns small-24 large-10">
-      <?php wp_nav_menu(
+      <?php
+        wp_nav_menu(
           array(
             'theme_location' => 'footer-menu',
             'container' => '',
@@ -9,12 +10,6 @@
           )
         );
       ?>
-      <!-- <ul class="footer__nav">
-        <li><a href="repeteren.php">Oefenruimte</a></li>
-        <li><a href="vrijwilliger-worden.php">Vrijwilliger worden</a></li> -->
-        <!-- <li><a href="praktische-info.php">Praktische informatie</a></li> -->
-        <!-- <li><a href="werken-bij.php">Werken bij</a></li> -->
-        <!-- <li><a href="over-elektra.php">Over Elektra</a></li> -->
       </ul>
     </div>
     <div class="columns small-24 large-8 end">
