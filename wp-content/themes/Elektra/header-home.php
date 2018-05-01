@@ -43,7 +43,7 @@
             include('home-header__event-block.php');
           endwhile;
         else :
-          _e( 'Er is geen evenement gevonden' );
+          echo "Er is geen evenement gevonden";
         endif;
 
       ?>
@@ -70,10 +70,10 @@
               <a href="<?php the_permalink();?>" class="btn btn-primary dark">Lees meer</a>
             </div>
 
-            <?
+            <?php
             endwhile;
           else :
-            _e( 'Er is geen evenement gevonden' );
+            echo "Er is geen evenement gevonden";
           endif;
 
         ?>

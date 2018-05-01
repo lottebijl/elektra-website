@@ -31,7 +31,7 @@
 	        <div class="row">
 	          <div class="columns small-24 large-14 float-right">
 	            <div class="video-container">
-	              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?the_field('event_yt')?>" frameborder="0" allowfullscreen></iframe>
+	              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php the_field('event_yt')?>" frameborder="0" allowfullscreen></iframe>
 	            </div>
 	          </div>
 	        </div>

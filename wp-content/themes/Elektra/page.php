@@ -2,7 +2,7 @@
 <section class="header header--fixed">
   <div class="row">
     <div class="columns small-24 large-14 large-offset-1 end">
-      <p class="header__title"><? the_title(); ?></p>
+      <p class="header__title"><?php the_title(); ?></p>
     </div>
   </div>
 </section>
@@ -13,11 +13,11 @@
         <div class="columns small-24 large-14 large-push-10">
           <div class="content">
             <div id="trigger1"></div>
-            <p><?
+            <p><?php
               $id = get_the_id();
               $post = get_post($id);
               $content = apply_filters('the_content', $post->post_content);
-              _e($content);
+              echo $content;
             ?></p>
           </div>
         </div>

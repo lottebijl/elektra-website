@@ -13,8 +13,8 @@
         <p class="agenda__title">
           <?php the_title(); ?>
         </p>
-        <span class="agenda__subtitle"><?the_field('event_band_genre')?><?the_field('event_subtitle')?></span>
-        <span class="agenda__subtext"><?the_field('event_subtitle')?></span>
+        <span class="agenda__subtitle"><?php the_field('event_genre')?><?php the_field('event_subtitle')?></span>
+        <span class="agenda__subtext"><?php the_field('event_subtitle')?></span>
         <span class="agenda__price">
           <?php
             if (empty(get_field('event_price'))) :
@@ -24,7 +24,7 @@
             endif;
           ?>
         </span>
-        <span class="agenda__time">Deur open: <?the_field('event_open')?> uur<br>Aanvang: <?the_field('event_start')?> uur</span>
+        <span class="agenda__time">Deur open: <?php the_field('event_open')?> uur<br>Aanvang: <?php the_field('event_start')?> uur</span>
       </div>
     </div>
   </a>

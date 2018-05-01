@@ -1,7 +1,9 @@
 <?php get_header();?>
-<?php if ( is_front_page() && is_home() ) :
-	require_once('header-home.php');
-endif; ?>
+<?php
+	if ( is_front_page() && is_home() ) :
+		include('header-home.php');
+	endif;
+?>
 
 <section class="section-bevestigd">
   <div class="row">
