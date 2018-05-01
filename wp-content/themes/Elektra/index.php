@@ -17,6 +17,13 @@
 			$args = array(
 				'post_type' => 'events',
 				'posts_per_page' => '3',
+				'meta_query' => array(
+					array(
+						'key'		=> 'event_date',
+					)
+				),
+				'orderby'	=> 'meta_value_num',
+				'order'		=> 'ASC'
 			);
 			$the_query = new WP_Query( $args );
 

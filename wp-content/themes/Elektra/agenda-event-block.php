@@ -13,8 +13,14 @@
         <p class="agenda__title">
           <?php the_title(); ?>
         </p>
-        <span class="agenda__subtitle"><?php the_field('event_genre')?><?php the_field('event_subtitle')?></span>
-        <span class="agenda__subtext"><?php the_field('event_subtitle')?></span>
+        <span class="agenda__subtitle">
+          <?php
+            if (!empty(get_field('event_subtitle'))) :
+              echo get_field('event_subtitle');
+            endif;
+          ?>
+        </span>
+        <span class="agenda__subtext"><?php the_field('event_subtext')?></span>
         <span class="agenda__price">
           <?php
             if (empty(get_field('event_price'))) :

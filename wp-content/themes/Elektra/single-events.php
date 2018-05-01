@@ -13,9 +13,7 @@
       <p class="header__title"><?php the_title(); ?></p>
       <p class="header__genre">
 				<?php
-					if (!empty(get_field('event_band_genre'))) :
-						echo get_field('event_band_genre');
-					else :
+					if (!empty(get_field('event_subtitle'))) :
 						echo get_field('event_subtitle');
 					endif;
 				?>

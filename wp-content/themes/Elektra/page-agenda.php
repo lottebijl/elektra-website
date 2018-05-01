@@ -6,7 +6,17 @@
     <div class="row">
 
       <?php
-      		$args = array( 'post_type' => 'events');
+      		$args = array(
+            'post_type' => 'events',
+            'meta_query' => array(
+              array(
+                'key'		=> 'event_date',
+              )
+            ),
+            'orderby'	=> 'meta_value_num',
+            'order'		=> 'ASC'
+          );
+
       		$the_query = new WP_Query( $args );
 
       		if ( $the_query->have_posts() ) :
