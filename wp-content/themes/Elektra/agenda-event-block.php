@@ -7,7 +7,7 @@
   <a href="<?php the_permalink(); ?>" class="agenda-block agenda-block--small">
     <div class="agenda__inner">
       <p class="agenda__date">
-        <span><?php echo $date->format('j M Y'); ?></span>
+        <span><?php echo $date->format('D j M'); ?></span>
       </p>
       <div class="agenda__content">
         <p class="agenda__title">
