@@ -5,12 +5,16 @@
   <div class="container">
     <div class="row">
 
-      <?php
+      <?php  
+          $today = date('Ymd');
+
       		$args = array(
             'post_type' => 'events',
             'meta_query' => array(
               array(
                 'key'		=> 'event_date',
+                'compare'	=> '>=',
+                'value'		=> $today,
               )
             ),
             'orderby'	=> 'meta_value_num',
