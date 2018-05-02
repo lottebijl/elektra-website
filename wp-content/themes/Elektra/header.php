@@ -7,7 +7,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Elektra Sliedrecht</title>
-    <link rel="icon" href="<?php bloginfo('template_directory');?>/assets/images/elektra-favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_directory');?>/assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory');?>/assets/images/favicon/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/style.min.css">
   </head>
